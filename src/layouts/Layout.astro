@@ -5,9 +5,11 @@
 
     interface Props {
         title?: string;
+        subtitle: string;
+        bgImage?: string;
     }
 
-    const { title } = Astro.props
+    const { title, bgImage, subtitle } = Astro.props
 
 ---
 <!DOCTYPE html>
@@ -22,10 +24,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body class="bg-coffee-100">
-        <Header />
+        <Header 
+            bgImage={bgImage}
+            subtitle={subtitle}
+        />
             <slot/>
         <Footer/>
     </body>
 </html>
-
-
