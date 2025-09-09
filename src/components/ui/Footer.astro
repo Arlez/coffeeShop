@@ -1,3 +1,25 @@
-<footer>
-    <h1>footer</h1>
+---
+import FooterBox from "./FooterBox.astro"
+---
+<footer class="bg-coffee-900 pt-20 ">
+    <div class="max-w-7xl mx-auto mt-10 grid lg:grid-cols-3 lg:gap-5">
+        <FooterBox heading="Ubicación">
+            <p class="text-white mt-5">Calle Falsa 123, Ciudad, País</p>
+            <p class="text-white">Tel: (123) 456-7890</p>
+        </FooterBox>
+
+        <FooterBox heading="Reservación">
+            <p class="text-white mt-5">Reserva tu mesa con anticipación</p>
+            <p class="text-white">Email:test@test.cl</p>
+        </FooterBox>
+
+        <FooterBox heading="Horario">
+            <p class="text-white mt-5">Lunes a Viernes: 8:00 AM - 8:00 PM</p>
+            <p class="text-white">Sábado y Domingo: 9:00 AM - 6:00 PM</p>   
+        </FooterBox>
+
+    </div>
+    <p class="py-10 text-center text-white text-sm">
+        Todos los derechos reservados. La Cafetería. &copy; {new Date().getFullYear()}
+    </p>
 </footer>
